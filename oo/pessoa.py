@@ -14,3 +14,8 @@ if __name__ == '__main__':
     print(arthur.cumprimentar())
     for filho in ana.filhos:
         print(filho.nome)
+    ana.sobrenome='Lopes' # atributo criado em tempo de execução
+    print(ana.sobrenome)
+    print(ana.__dict__)
+    print(arthur.__dict__)
+    del ana.sobrenome
