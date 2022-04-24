@@ -108,7 +108,7 @@ class Fase():
         """
         for passaro in self._passaros:
             passaro.calcular_posicao(tempo)
-            for alvo in self._passaros + self._porcos:
+            for alvo in self._obstaculos + self._porcos: #Erro estava aqui
                 passaro.colidir(alvo, self.intervalo_de_colisao)
             passaro.colidir_com_chao()
         pontos=[self._transformar_em_ponto(a) for a in self._passaros+self._obstaculos+self._porcos]
